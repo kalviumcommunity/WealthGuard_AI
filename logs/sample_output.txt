@@ -1,0 +1,65 @@
+python chat_completion.py
+
+================================================
+
+2026-09-08 10:45:03,839 | INFO | Sending chat completion request
+2026-09-08 10:45:03,839 | INFO | Request messages: [
+  {
+    "role": "system",
+    "content": "You are WealthGuard AI, an evidence-based assistant for wealth management information."
+  },
+  {
+    "role": "user",
+    "content": "What is the purpose of WealthGuard AI?"
+  }
+]
+2026-09-08 10:45:08,036 | INFO | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+
+Model response:
+WealthGuard AI provides evidence-based information to help people understand wealth management topics and make more informed financial decisions. It can explain concepts, compare strategies, discuss risks, and help organize questions for a qualified financial professional. It does not replace personalized advice from a licensed adviser, tax professional, or attorney.
+2026-09-08 10:45:08,046 | INFO | Response payload: {
+  "id": "chatcmpl-ELiSc5X7wWtFYmMyC1QRVbXoQjmGW",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "WealthGuard AI provides evidence-based information to help people understand wealth management topics and make more informed financial decisions. It can explain concepts, compare strategies, discuss risks, and help organize questions for a qualified financial professional. It does not replace personalized advice from a licensed adviser, tax professional, or attorney.",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1788844502,
+  "model": "gpt-5.6-luna",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "default",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 63,
+    "prompt_tokens": 34,
+    "total_tokens": 97,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0,
+      "text_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cache_write_tokens": 0,
+      "cached_tokens": 0,
+      "image_tokens": null,
+      "text_tokens": null
+    }
+  }
+}
+2026-09-08 10:45:08,046 | INFO | Token usage: prompt=34, completion=63, total=97
