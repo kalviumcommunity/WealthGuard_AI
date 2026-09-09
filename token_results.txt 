@@ -1,0 +1,86 @@
+python token_analysis.py
+
+======================================================================
+WEALTHGUARD AI - TOKEN AND COST ANALYSIS
+======================================================================
+
+Tokenizer: o200k_base
+Input price: $1.00 per 1M tokens
+Output price: $2.00 per 1M tokens
+
+----------------------------------------------------------------------
+Short question
+----------------------------------------------------------------------
+Input characters : 38
+Input tokens     : 9
+Output characters: 104
+Output tokens    : 15
+Input cost       : $0.00000900
+Output cost      : $0.00003000
+Total cost       : $0.00003900
+
+----------------------------------------------------------------------
+Medium paragraph
+----------------------------------------------------------------------
+Input characters : 317
+Input tokens     : 46
+Output characters: 152
+Output tokens    : 21
+Input cost       : $0.00004600
+Output cost      : $0.00004200
+Total cost       : $0.00008800
+
+----------------------------------------------------------------------
+Long project document
+----------------------------------------------------------------------
+Input characters : 1644
+Input tokens     : 266
+Output characters: 244
+Output tokens    : 35
+Input cost       : $0.00026600
+Output cost      : $0.00007000
+Total cost       : $0.00033600
+
+======================================================================
+TOTAL
+======================================================================
+Total input tokens : 321
+Total output tokens: 71
+Input cost         : $0.00032100
+Output cost        : $0.00014200
+Estimated total    : $0.00046300
+
+======================================================================
+LENGTH VS TOKEN RELATIONSHIP
+======================================================================
+Short question: 38 characters -> 9 tokens (4.22 characters/token)
+Medium paragraph: 317 characters -> 46 tokens (6.89 characters/token)
+Long project document: 1644 characters -> 266 tokens (6.18 characters/token)
+
+Observation:
+Text length and token count generally increase together, but they
+are not exactly proportional. Tokenizers split text according to
+subword patterns rather than simply counting characters or words.
+Long or uncommon words, punctuation, code, numbers, and other
+languages can therefore produce different token-to-character ratios.
+
+
+
+
+
+======================================================================
+CONCLUSION
+======================================================================
+
+The experiment shows that token count generally increases as text
+length increases, but the relationship is not exactly proportional.
+
+The three samples produced different characters-per-token ratios,
+demonstrating that tokenization depends on the structure and content
+of the text rather than character count alone.
+
+The cost calculation also demonstrates why token measurement is
+important for a RAG system. Retrieved documents contribute to input
+token usage, while generated answers contribute to output token usage.
+Therefore, chunk size and retrieval strategy should consider both
+context limits and API cost.
