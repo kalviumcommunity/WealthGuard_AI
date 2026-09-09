@@ -1,0 +1,40 @@
+=== Starting Chat Simulation ===
+Token Budget: 70
+
+Turn 1 (user): Total tokens: 26
+   -> Current history length: 2 messages
+
+Turn 2 (assistant): Total tokens: 42
+   -> Current history length: 3 messages
+
+Turn 3 (user): Total tokens: 75
+   -> Exceeded budget of 70. Trimming history...
+[TRIM] Removing oldest message: Hi, what is your purpose?...
+   -> Tokens after trimming: 64
+   -> Current history length: 3 messages
+
+Turn 4 (assistant): Total tokens: 83
+   -> Exceeded budget of 70. Trimming history...
+[TRIM] Removing oldest message: I am an assistant to answer yo...
+   -> Tokens after trimming: 67
+   -> Current history length: 3 messages
+
+Turn 5 (user): Total tokens: 104
+   -> Exceeded budget of 70. Trimming history...
+[TRIM] Removing oldest message: Can you explain the new tax po...
+[TRIM] Removing oldest message: Sure, the new tax policies sta...
+   -> Tokens after trimming: 52
+   -> Current history length: 2 messages
+
+Turn 6 (assistant): Total tokens: 73
+   -> Exceeded budget of 70. Trimming history...
+[TRIM] Removing oldest message: What about the 401k contributi...
+   -> Tokens after trimming: 36
+   -> Current history length: 2 messages
+
+Turn 7 (user): Total tokens: 48
+   -> Current history length: 3 messages
+
+Turn 8 (assistant): Total tokens: 67
+   -> Current history length: 4 messages
+
