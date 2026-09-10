@@ -1,0 +1,23 @@
+=== Structured Output & JSON Parsing Demo ===
+
+--- Asking: 'What is the refund window?' ---
+Raw response: {"answer": "You have 30 days to request a refund.", "source": "Refund Policy v2"}
+Parsed Object: {'answer': 'You have 30 days to request a refund.', 'source': 'Refund Policy v2'}
+
+--- Asking: 'What is the refund window? (simulate malformed)' ---
+Raw response: Here is your answer:
+{"answer": "It is 30 days", "source": "Policy"}
+[!] Error parsing response: malformed JSON - could not decode
+[!] Attempting recovery (retrying with stricter prompt)...
+Retry raw response: {"answer": "You have 30 days to request a refund.", "source": "Refund Policy v2"}
+[+] Recovery successful!
+Parsed Object: {'answer': 'You have 30 days to request a refund.', 'source': 'Refund Policy v2'}
+
+--- Asking: 'What is the refund window? (simulate missing)' ---
+Raw response: {"answer": "It is 30 days"}
+[!] Error parsing response: missing fields: ['source']
+[!] Attempting recovery (retrying with stricter prompt)...
+Retry raw response: {"answer": "You have 30 days to request a refund.", "source": "Refund Policy v2"}
+[+] Recovery successful!
+Parsed Object: {'answer': 'You have 30 days to request a refund.', 'source': 'Refund Policy v2'}
+
