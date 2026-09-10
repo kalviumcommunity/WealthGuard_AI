@@ -1,0 +1,119 @@
+WEALTHGUARD AI - PARAMETER EXPERIMENT RESULTS
+============================================================
+
+Objective
+---------
+The objective was to study how model parameters affect the
+behavior of a grounded factual WealthGuard AI response.
+
+Model Used
+----------
+gpt-4o through OpenRouter free model routing.
+
+Task 1 - Temperature Experiment
+--------------------------------
+
+Temperature = 0.0
+The response was stable, structured, and factual. It clearly
+listed the product's annual management fee, minimum investment,
+lock-in period, and early withdrawal information.
+
+Temperature = 0.7
+The response contained slight wording variations while keeping
+the main product facts consistent.
+
+Temperature = 1.2
+The response showed more wording variation compared with lower
+temperature settings, while still maintaining the main factual
+content.
+
+Observation:
+Higher temperature introduced more variation in wording.
+Lower temperature produced more predictable and focused answers.
+For a grounded financial-information task, a low temperature is
+preferable because consistency is more important than creativity.
+
+Task 2 - Max Tokens Experiment
+------------------------------
+
+max_tokens = 30
+The response was very short and was cut off before completing
+the answer.
+
+max_tokens = 100
+The response contained substantially more information but was
+still limited to 100 output tokens.
+
+Observation:
+Increasing max_tokens allows the model to generate a longer
+response. A very small limit can cause the response to end
+prematurely, while a sensible limit allows the answer to remain
+complete and useful.
+
+Task 3 - Top P Experiment
+-------------------------
+
+top_p = 0.2
+The response used a narrower token-selection range and produced
+a focused factual answer.
+
+top_p = 1.0
+The response allowed the full probability distribution and showed
+slightly different wording, while the main facts remained
+consistent.
+
+Observation:
+top_p can influence the amount of variation in generated text.
+For a grounded factual application, it is preferable to keep
+top_p at the default 1.0 and use temperature as the primary
+sampling control.
+
+Task 4 - Recommended Settings
+------------------------------
+
+Recommended settings for WealthGuard AI:
+
+temperature = 0.0-0.2
+max_tokens = 100-200
+top_p = 1.0
+stop = None unless required
+
+Reasoning:
+
+1. Low temperature makes factual responses more stable and
+   predictable.
+
+2. A max_tokens range of 100-200 provides enough space for a
+   concise relationship-manager answer without unnecessary
+   rambling.
+
+3. top_p should generally remain at 1.0 when temperature is used
+   as the main sampling control.
+
+4. stop sequences are optional and should only be used when a
+   specific response boundary is required.
+
+Conclusion
+----------
+
+The experiments demonstrate that generation parameters influence
+response behavior.
+
+Temperature mainly affects variation and creativity. Lower values
+are more suitable for factual and grounded responses.
+
+max_tokens controls the maximum amount of generated output.
+The experiment clearly showed that a very small limit can truncate
+the response.
+
+top_p controls the range of tokens considered during generation.
+For WealthGuard AI, keeping top_p at 1.0 while using a low
+temperature provides a simple and predictable configuration.
+
+For a grounded WealthGuard AI system, the recommended configuration
+is:
+
+temperature = 0.0-0.2
+max_tokens = 100-200
+top_p = 1.0
+stop = None unless required
