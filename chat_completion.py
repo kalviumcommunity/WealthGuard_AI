@@ -11,6 +11,9 @@ from openai import (
     APIError,
 )
 
+from prompts.templates import render_wealthguard_prompt
+
+
 # Load environment variables
 load_dotenv()
 
@@ -28,6 +31,7 @@ if not BASE_URL:
 if not MODEL:
     raise RuntimeError("OPENAI_MODEL is missing from .env")
 
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -35,6 +39,7 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(__name__)
+
 
 # Create OpenAI-compatible client
 client = OpenAI(
@@ -44,17 +49,23 @@ client = OpenAI(
 
 
 def main():
+    context = """
+WealthGuard AI is an evidence-based assistant for relationship managers.
+It helps users find and understand information from approved
+wealth-management knowledge sources.
+"""
+
+    question = "What is the purpose of WealthGuard AI?"
+
+    user_prompt = render_wealthguard_prompt(
+        context=context,
+        question=question,
+    )
+
     messages = [
         {
-            "role": "system",
-            "content": (
-                "You are WealthGuard AI, an evidence-based assistant "
-                "for wealth management information."
-            ),
-        },
-        {
             "role": "user",
-            "content": "What is the purpose of WealthGuard AI?",
+            "content": user_prompt,
         },
     ]
 
@@ -70,13 +81,13 @@ def main():
             messages=messages,
         )
 
-        # Task 2: Print model response
+        # Print model response
         reply = response.choices[0].message.content
 
         print("\nModel response:")
         print(reply)
 
-        # Task 3: Log response
+        # Log response
         logger.info(
             "Response payload: %s",
             response.model_dump_json(indent=2),
