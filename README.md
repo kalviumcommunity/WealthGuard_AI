@@ -59,6 +59,23 @@ WealthGuard AI enables natural-language queries against a vetted knowledge base,
 * **PyMuPDF** — Python library for extracting and processing content from PDF documents
 * **PDF/DOCX Parsers** — Used to extract text and metadata from organizational documents
 
+### Multi-Format Intake
+
+The document loader converts PDF, Markdown, plain text, and HTML files into
+source-tagged plain text before chunking or embedding. Unsupported, missing, or
+unreadable files are reported and skipped so one bad file does not stop intake.
+
+Install dependencies and run the sample corpus with:
+
+```bash
+python -m pip install -r requirements.txt
+python -m src.document_loader data/sample_corpus
+```
+
+Each successful file prints its source filename, extracted character count, and
+a short sample. The sample corpus includes Markdown, text, HTML, and an
+unsupported CSV to demonstrate graceful skipping.
+
 ### Deployment
 
 * **Docker** — Containerization platform for consistent development and deployment environments
