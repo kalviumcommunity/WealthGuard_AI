@@ -1,0 +1,12 @@
+.venv/
+node_modules/
+.env
+data/
+!data/
+data/*
+!data/sample_corpus/
+!data/sample_corpus/**
+outputs/
+__pycache__/
+*.pyc
+.env
