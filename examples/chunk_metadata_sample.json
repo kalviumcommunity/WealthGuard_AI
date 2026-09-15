@@ -1,0 +1,24 @@
+[
+  {
+    "text": "# Secure Growth Plan\n\nThe annual management fee is 1.2 percent. The minimum investment is 50,000.",
+    "metadata": {
+      "source": "policy.md",
+      "chunk_index": 0,
+      "char_start": 0,
+      "char_end": 98,
+      "section": "Secure Growth Plan",
+      "page": null
+    }
+  },
+  {
+    "text": "Compliance note: Capital protection is not guaranteed. Customers should review the applicable terms before investing.",
+    "metadata": {
+      "source": "compliance.txt",
+      "chunk_index": 0,
+      "char_start": 0,
+      "char_end": 117,
+      "section": null,
+      "page": null
+    }
+  }
+]
