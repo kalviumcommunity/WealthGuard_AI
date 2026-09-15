@@ -76,6 +76,20 @@ Each successful file prints its source filename, extracted character count, and
 a short sample. The sample corpus includes Markdown, text, HTML, and an
 unsupported CSV to demonstrate graceful skipping.
 
+### Chunk Metadata & Source Tracking
+
+Chunks are stored as `text` beside a consistent `metadata` object containing
+the source filename, chunk index, character offsets, Markdown section when
+available, and page when supplied by a format-specific loader. Run the demo:
+
+```bash
+python -m src.chunk_metadata data/sample_corpus
+```
+
+The command prints a sample chunk and a citation trace such as
+`Answer from: policy.md | chunk 0`. A committed example is available in
+`examples/chunk_metadata_sample.json`.
+
 ### Deployment
 
 * **Docker** — Containerization platform for consistent development and deployment environments
