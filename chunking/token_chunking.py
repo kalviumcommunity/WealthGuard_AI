@@ -168,6 +168,6 @@ print(
 )
 
 print(
-    "The final chunk size should be tested with the actual model and "
+    ""
     "retrieval top-k value used by the application."
 )
