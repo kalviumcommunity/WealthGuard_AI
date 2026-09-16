@@ -1,0 +1,85 @@
+WEALTHGUARD AI - TOKEN-AWARE CHUNKING
+============================================================
+
+TASK 1 - TOKEN-BASED CHUNKING
+------------------------------------------------------------
+Tokenizer: tiktoken o200k_base
+Chunk size: 256 tokens
+Overlap: 40 tokens
+
+Sample input:
+Total tokens: 140
+Number of chunks: 1
+
+The chunker measures text using tokens instead of characters.
+Each chunk contains at most 256 tokens.
+
+TASK 2 - CONTROLLED OVERLAP
+------------------------------------------------------------
+Each new chunk starts 40 tokens before the previous chunk ends.
+Therefore, adjacent chunks share controlled boundary context.
+
+TASK 3 - BOUNDARY CONTEXT DEMONSTRATION
+------------------------------------------------------------
+Without overlap:
+
+Chunk 1:
+Early withdrawal is subject to applicable terms and
+
+Chunk 2:
+conditions, and customers should review the approved product
+documentation before making decisions.
+
+The idea is split across the boundary.
+
+With 8-token overlap:
+
+Chunk 1:
+Early withdrawal is subject to applicable terms and
+
+Chunk 2:
+Early withdrawal is subject to applicable terms and conditions,
+and customers should review the approved product documentation
+before making
+
+The overlap repeats boundary context, allowing the complete idea
+to appear in the next chunk.
+
+TASK 4 - SIZE AND OVERLAP JUSTIFICATION
+------------------------------------------------------------
+Chunk size: 256 tokens
+Overlap: 40 tokens
+
+256 tokens provides focused retrieval units while leaving sufficient
+room for the question, instructions, retrieved chunks, and generated
+answer.
+
+40-token overlap is approximately 16% of the chunk size. It preserves
+boundary context without excessive duplication and unnecessary cost.
+
+The final RAG prompt must fit within the deployed model's context
+window, including instructions, question, retrieved chunks, and
+output tokens.
+
+These settings balance retrieval precision, context preservation,
+and token cost.
+
+TASK 5 - SAMPLE OUTPUT
+------------------------------------------------------------
+Main chunker:
+Tokenizer: o200k_base
+Chunk size: 256
+Overlap: 40
+Total tokens: 140
+Number of chunks: 1
+
+Boundary demonstration:
+Without overlap: 2 chunks
+With 8-token overlap: 3 chunks
+
+Implementation:
+chunking/token_chunker.py
+chunking/chunk_overlap_demo.py
+
+Sample output:
+chunking/chunk_results.txt
