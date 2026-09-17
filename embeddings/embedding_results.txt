@@ -1,0 +1,27 @@
+Model: all-MiniLM-L6-v2
+Number of texts: 3
+Vector dimension: 384
+All vectors same length: True
+
+SAMPLE VECTOR VALUES
+------------------------------------------------------------
+Text 1 first 8 values: [ 0.07627759  0.02670365 -0.03226151  0.06266811  0.04865901 -0.02984392
+  0.06034781 -0.0144921 ]
+Text 2 first 8 values: [ 0.06945609  0.03419341 -0.01288462  0.06269594  0.05518995 -0.02338576
+  0.04367416 -0.02096747]
+Text 3 first 8 values: [-0.10924765 -0.00429564  0.13568865  0.10214438  0.01110875 -0.08273856
+ -0.03812995  0.06385294]
+
+COSINE SIMILARITY
+------------------------------------------------------------
+Similar texts:   0.9825
+Unrelated text:  -0.0359
+
+INTERPRETATION
+------------------------------------------------------------
+The similar texts have a higher cosine similarity because they express the same meaning.
+The unrelated text has a lower similarity because it discusses a different topic.
+
+EMBEDDING EXPLANATION
+------------------------------------------------------------
+Embeddings are numerical vector representations of text meaning. They are not random IDs or simple keyword counts. Texts with similar meanings tend to have vectors that are closer together in vector space.
