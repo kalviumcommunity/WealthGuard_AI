@@ -71,6 +71,5 @@ def main():
         "closer together in vector space."
     )
 
-
 if __name__ == "__main__":
     main()
