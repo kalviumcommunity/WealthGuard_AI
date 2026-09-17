@@ -4,19 +4,18 @@ import json
 from openai import OpenAI
 
 
-# -----------------------------------
-# 1. ENVIRONMENT CONFIGURATION
-# -----------------------------------
+# Get configuration from environment variables
+API_KEY = os.getenv("OPENAI_API_KEY")
+MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
+BASE_URL = os.getenv("OPENAI_BASE_URL")
 
-API_KEY = os.environ.get("OPENAI_API_KEY")
-MODEL = os.environ.get("EMBEDDING_MODEL", "text-embedding-3-small")
-BASE_URL = os.environ.get("OPENAI_BASE_URL")
 
+# Check API key
 if not API_KEY:
-    raise ValueError("OPENAI_API_KEY is not set")
+    raise ValueError("Please set OPENAI_API_KEY")
 
 
-# Create OpenAI client
+# Create client
 if BASE_URL:
     client = OpenAI(
         api_key=API_KEY,
@@ -28,10 +27,7 @@ else:
     )
 
 
-# -----------------------------------
-# 2. PREPARED SAMPLE CORPUS
-# -----------------------------------
-
+# Small prepared corpus
 chunks = [
     {
         "text": "Password reset instructions for learner accounts.",
@@ -60,93 +56,82 @@ chunks = [
 ]
 
 
-# -----------------------------------
-# 3. GENERATE EMBEDDINGS
-# -----------------------------------
+# Get text from all chunks
+texts = []
 
-texts = [chunk["text"] for chunk in chunks]
+for chunk in chunks:
+    texts.append(chunk["text"])
 
+
+# Generate embeddings
 response = client.embeddings.create(
     model=MODEL,
     input=texts
 )
 
 
-# -----------------------------------
-# 4. STORE VECTOR + SOURCE + METADATA
-# -----------------------------------
-
+# Store embeddings with text and metadata
 records = []
 
-for chunk, item in zip(chunks, response.data):
-
-    record = {
-        "text": chunk["text"],
-        "metadata": chunk["metadata"],
-        "embedding": item.embedding
-    }
-
-    records.append(record)
+for i in range(len(chunks)):
+    records.append({
+        "text": chunks[i]["text"],
+        "metadata": chunks[i]["metadata"],
+        "embedding": response.data[i].embedding
+    })
 
 
-# -----------------------------------
-# 5. VALIDATE RESULTS
-# -----------------------------------
-
-if not records:
+# Check that embeddings were created
+if len(records) == 0:
     raise ValueError("No embeddings were generated")
 
 
+# Get vector dimension
 vector_length = len(records[0]["embedding"])
 
+
+# Verify every vector has the same dimension
 for record in records:
     if len(record["embedding"]) != vector_length:
         raise ValueError("Embedding dimensions do not match")
 
 
-# -----------------------------------
-# 6. PRINT VERIFICATION OUTPUT
-# -----------------------------------
-
-print("=" * 60)
-print("EMBEDDING GENERATION SUMMARY")
-print("=" * 60)
+# Print summary
+print("========================================")
+print("EMBEDDING GENERATION")
+print("========================================")
 
 print("Model:", MODEL)
 print("Chunks embedded:", len(records))
 print("Vector length:", vector_length)
 
-print("\nSample embedding:")
-print(records[0]["embedding"][:5])
 
-print("\nSample stored record:")
+# Print sample
+print("\n========================================")
+print("SAMPLE EMBEDDING")
+print("========================================")
+
 print("Text:", records[0]["text"])
 print("Metadata:", records[0]["metadata"])
 print("Vector length:", len(records[0]["embedding"]))
-print("Vector sample:", records[0]["embedding"][:5])
+print("First 5 values:", records[0]["embedding"][:5])
 
 
-# -----------------------------------
-# 7. SAVE SAMPLE OUTPUT
-# -----------------------------------
-
-output = []
+# Save sample output
+sample_output = []
 
 for record in records:
-    output.append({
+    sample_output.append({
         "text": record["text"],
         "metadata": record["metadata"],
         "vector_length": len(record["embedding"]),
-        "embedding_sample": record["embedding"][:5]
+        "vector_sample": record["embedding"][:5]
     })
 
 
-with open("sample_embedding_output.json", "w", encoding="utf-8") as file:
-    json.dump(output, file, indent=4)
+with open("sample_embedding_output.json", "w") as file:
+    json.dump(sample_output, file, indent=4)
 
 
-print("\nSample output saved to:")
-print("sample_embedding_output.json")
-
-print("\nEmbedding generation completed successfully.")
-
+print("\nSample output saved to sample_embedding_output.json")
+print("Embedding generation completed successfully.")
