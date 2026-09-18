@@ -1,0 +1,34 @@
+[
+  {
+    "query": "What is the annual management fee for the Secure Growth Plan?",
+    "expected_source": "product_brochure.txt",
+    "top_source": "product_brochure.txt",
+    "top_score": 0.9115,
+    "passed": true,
+    "note": "Expected source ranked first."
+  },
+  {
+    "query": "How long is the Secure Growth Plan lock-in period?",
+    "expected_source": "product_brochure.txt",
+    "top_source": "product_brochure.txt",
+    "top_score": 0.9006,
+    "passed": true,
+    "note": "Expected source ranked first."
+  },
+  {
+    "query": "Is capital protection guaranteed before investing?",
+    "expected_source": "compliance.txt",
+    "top_source": "compliance.txt",
+    "top_score": 0.8673,
+    "passed": true,
+    "note": "Expected source ranked first."
+  },
+  {
+    "query": "What are the applicable product terms?",
+    "expected_source": "product_brochure.txt",
+    "top_source": "compliance.txt",
+    "top_score": 0.2771,
+    "passed": false,
+    "note": "Surprising case: broad wording may rank the compliance warning first."
+  }
+]
