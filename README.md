@@ -90,6 +90,24 @@ The command prints a sample chunk and a citation trace such as
 `Answer from: policy.md | chunk 0`. A committed example is available in
 `examples/chunk_metadata_sample.json`.
 
+### Embedding Quality Checks
+
+Before trusting retrieval, run the known-query sanity tests with the same
+`all-MiniLM-L6-v2` embedding function used for ranking:
+
+```bash
+python -m src.embedding_sanity
+```
+
+The check reports each query, expected source, top-ranked source, cosine score,
+pass/fail status, and a note for surprising cases. The sample run produced
+three passes and one failure: the broad query `What are the applicable product
+terms?` ranked `compliance.txt` above the expected product brochure. This shows
+that generic wording can retrieve a relevant warning instead of the intended
+product detail, so retrieval needs broader evaluation and query-specific
+guardrails before production use. Results are saved to
+`results/embedding_sanity_report.json`.
+
 ### Deployment
 
 * **Docker** — Containerization platform for consistent development and deployment environments
