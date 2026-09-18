@@ -1,0 +1,58 @@
+SIMILARITY RANKING DEMONSTRATION
+======================================================================
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 2982.28it/s]
+Model: all-MiniLM-L6-v2
+Query: What is the annual management fee for the Secure Growth Plan?
+
+RANKED RESULTS
+----------------------------------------------------------------------
+
+Rank 1
+Chunk ID: chunk_1
+Source: product_brochure.txt
+Page: 2
+Cosine similarity: 0.8197
+Text: The Secure Growth Plan has an annual management fee of 1.2 percent and a minimum investment of fifty thousand rupees.
+
+Rank 2
+Chunk ID: chunk_2
+Source: product_brochure.txt
+Page: 3
+Cosine similarity: 0.5640
+Text: The Secure Growth Plan has a three-year lock-in period. Early withdrawal is subject to applicable terms and conditions.
+
+Rank 3
+Chunk ID: chunk_3
+Source: compliance.txt
+Page: 1
+Cosine similarity: 0.3351
+Text: Capital protection is not guaranteed. Customers should review the applicable product terms before investing.
+
+Rank 4
+Chunk ID: chunk_4
+Source: tax_rules.txt
+Page: 4
+Cosine similarity: 0.1426
+Text: Tax treatment may depend on applicable regulations and customer circumstances.
+
+Rank 5
+Chunk ID: chunk_5
+Source: weather.txt
+Page: 1
+Cosine similarity: -0.0123
+Text: The mountain weather forecast predicts heavy snowfall tomorrow.
+
+MOST SIMILAR
+----------------------------------------------------------------------
+chunk_1 - score: 0.8197
+The Secure Growth Plan has an annual management fee of 1.2 percent and a minimum investment of fifty thousand rupees.
+
+LEAST SIMILAR
+----------------------------------------------------------------------
+chunk_5 - score: -0.0123
+The mountain weather forecast predicts heavy snowfall tomorrow.
+
+METRIC JUSTIFICATION
+----------------------------------------------------------------------
+Cosine similarity compares the direction of embedding vectors. It is useful for semantic retrieval because texts with similar meaning tend to have moresimilar vector directions.
