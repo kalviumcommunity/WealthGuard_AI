@@ -1,0 +1,19 @@
+TEST RECORD INSERTED
+----------------------------------------------------------------------
+ID: test_chunk_001
+
+READ-BACK TEST
+----------------------------------------------------------------------
+ID: test_chunk_001
+Vector length: 384
+Text: The Secure Growth Plan has an annual management fee of 1.2 percent.
+Metadata: {'section': 'Fees', 'page': 2, 'source_document': 'product_brochure.txt', 'chunk_index': 0}
+
+VERIFICATION
+----------------------------------------------------------------------
+Database reachable: PASS
+Correct vector dimension: PASS
+Embedding stored: PASS
+Source text stored: PASS
+Metadata stored: PASS
+Read-back successful: PASS
