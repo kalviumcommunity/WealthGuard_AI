@@ -1,0 +1,172 @@
+{
+  "model": "all-MiniLM-L6-v2",
+  "test_queries": [
+    {
+      "query": "What is the annual management fee for the Secure Growth Plan?",
+      "expected_source": "product_brochure.txt",
+      "note": "Specific fee query should retrieve the product fee chunk."
+    },
+    {
+      "query": "How long is the Secure Growth Plan lock-in period?",
+      "expected_source": "product_brochure.txt",
+      "note": "Specific lock-in query should retrieve the product terms chunk."
+    },
+    {
+      "query": "Is capital protection guaranteed before investing?",
+      "expected_source": "compliance.txt",
+      "note": "Risk and guarantee language should retrieve the compliance chunk."
+    },
+    {
+      "query": "What are the applicable product terms?",
+      "expected_source": "product_brochure.txt",
+      "note": "Surprising case: broad wording may rank the compliance warning first."
+    }
+  ],
+  "settings": [
+    {
+      "setting": "baseline_top1",
+      "k": 1,
+      "min_score": 0.0,
+      "hit_rate": 0.75,
+      "hits": 3,
+      "tests": 4,
+      "average_results": 1.0,
+      "details": [
+        {
+          "query": "What is the annual management fee for the Secure Growth Plan?",
+          "expected_source": "product_brochure.txt",
+          "returned_sources": [
+            "product_brochure.txt"
+          ],
+          "top_score": 0.9115,
+          "hit": true
+        },
+        {
+          "query": "How long is the Secure Growth Plan lock-in period?",
+          "expected_source": "product_brochure.txt",
+          "returned_sources": [
+            "product_brochure.txt"
+          ],
+          "top_score": 0.9006,
+          "hit": true
+        },
+        {
+          "query": "Is capital protection guaranteed before investing?",
+          "expected_source": "compliance.txt",
+          "returned_sources": [
+            "compliance.txt"
+          ],
+          "top_score": 0.8673,
+          "hit": true
+        },
+        {
+          "query": "What are the applicable product terms?",
+          "expected_source": "product_brochure.txt",
+          "returned_sources": [
+            "compliance.txt"
+          ],
+          "top_score": 0.2771,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "setting": "wider_top2",
+      "k": 2,
+      "min_score": 0.0,
+      "hit_rate": 1.0,
+      "hits": 4,
+      "tests": 4,
+      "average_results": 2.0,
+      "details": [
+        {
+          "query": "What is the annual management fee for the Secure Growth Plan?",
+          "expected_source": "product_brochure.txt",
+          "returned_sources": [
+            "product_brochure.txt",
+            "product_brochure.txt"
+          ],
+          "top_score": 0.9115,
+          "hit": true
+        },
+        {
+          "query": "How long is the Secure Growth Plan lock-in period?",
+          "expected_source": "product_brochure.txt",
+          "returned_sources": [
+            "product_brochure.txt",
+            "product_brochure.txt"
+          ],
+          "top_score": 0.9006,
+          "hit": true
+        },
+        {
+          "query": "Is capital protection guaranteed before investing?",
+          "expected_source": "compliance.txt",
+          "returned_sources": [
+            "compliance.txt",
+            "product_brochure.txt"
+          ],
+          "top_score": 0.8673,
+          "hit": true
+        },
+        {
+          "query": "What are the applicable product terms?",
+          "expected_source": "product_brochure.txt",
+          "returned_sources": [
+            "compliance.txt",
+            "product_brochure.txt"
+          ],
+          "top_score": 0.2771,
+          "hit": true
+        }
+      ]
+    },
+    {
+      "setting": "strict_score_0.70",
+      "k": 3,
+      "min_score": 0.7,
+      "hit_rate": 0.75,
+      "hits": 3,
+      "tests": 4,
+      "average_results": 0.75,
+      "details": [
+        {
+          "query": "What is the annual management fee for the Secure Growth Plan?",
+          "expected_source": "product_brochure.txt",
+          "returned_sources": [
+            "product_brochure.txt"
+          ],
+          "top_score": 0.9115,
+          "hit": true
+        },
+        {
+          "query": "How long is the Secure Growth Plan lock-in period?",
+          "expected_source": "product_brochure.txt",
+          "returned_sources": [
+            "product_brochure.txt"
+          ],
+          "top_score": 0.9006,
+          "hit": true
+        },
+        {
+          "query": "Is capital protection guaranteed before investing?",
+          "expected_source": "compliance.txt",
+          "returned_sources": [
+            "compliance.txt"
+          ],
+          "top_score": 0.8673,
+          "hit": true
+        },
+        {
+          "query": "What are the applicable product terms?",
+          "expected_source": "product_brochure.txt",
+          "returned_sources": [],
+          "top_score": null,
+          "hit": false
+        }
+      ]
+    }
+  ],
+  "chosen_setting": "wider_top2",
+  "justification": "wider_top2 achieved the highest hit rate of 100% with 2.00 results returned per query."
+}

@@ -108,6 +108,21 @@ product detail, so retrieval needs broader evaluation and query-specific
 guardrails before production use. Results are saved to
 `results/embedding_sanity_report.json`.
 
+### Retrieval Relevance Tuning
+
+Compare retrieval settings against the same known query/source pairs:
+
+```bash
+python -m src.retrieval_tuning
+```
+
+The experiment measures top-k hit rate and average results returned per query.
+The baseline top-1 setting reached 75% hit rate. A strict `0.70` score
+threshold also reached 75% but discarded some queries. `wider_top2` reached
+100% because the expected source appeared within the top two results, so it is
+the chosen setting for this small corpus. Full per-query results and the
+justification are saved to `results/retrieval_tuning_report.json`.
+
 ### Deployment
 
 * **Docker** — Containerization platform for consistent development and deployment environments
