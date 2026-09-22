@@ -1,0 +1,43 @@
+======================================================================
+TOP-1 RETRIEVAL RESULTS
+======================================================================
+
+Rank: 1
+ID: chunk_1
+Similarity score: 0.6394
+Source document: product_brochure.txt
+Chunk index: 0
+Section: Fees
+Page: 2
+Text: The Secure Growth Plan has an annual management fee of 1.2 percent and a minimum investment of fifty thousand rupees.
+
+======================================================================
+TOP-3 RETRIEVAL RESULTS
+======================================================================
+
+Rank: 1
+ID: chunk_1
+Similarity score: 0.6394
+Source document: product_brochure.txt
+Chunk index: 0
+Section: Fees
+Page: 2
+Text: The Secure Growth Plan has an annual management fee of 1.2 percent and a minimum investment of fifty thousand rupees.
+
+Rank: 2
+ID: chunk_2
+Similarity score: 0.1279
+Source document: product_brochure.txt
+Chunk index: 1
+Section: Withdrawal Conditions
+Page: 3
+Text: The Secure Growth Plan has a three-year lock-in period. Early withdrawal is subject to applicable terms and conditions.
+
+Rank: 3
+ID: chunk_3
+Similarity score: -0.3299
+Source document: compliance.txt
+Chunk index: 0
+Section: Risk
+Page: 1
+Text: Capital protection is not guaranteed. Customers should review the applicable product terms before investing.
