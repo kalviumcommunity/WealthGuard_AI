@@ -1,0 +1,145 @@
+================================================================================
+BEFORE RE-RANKING
+================================================================================
+
+Rank 1
+ID: test_chunk_001
+Vector score: 0.8229
+Source: product_brochure.txt
+Section: Fees
+Page: 2
+Text: The Secure Growth Plan has an annual management fee of 1.2 percent.
+
+Rank 2
+ID: chunk_1
+Vector score: 0.8229
+Source: product_brochure.txt
+Section: Fees
+Page: 2
+Text: The Secure Growth Plan has an annual management fee of 1.2 percent.
+
+Rank 3
+ID: chunk_2
+Vector score: 0.1280
+Source: product_brochure.txt
+Section: Withdrawal Conditions
+Page: 3
+Text: The Secure Growth Plan has a three-year lock-in period and early withdrawal is subject to applicable terms.
+
+Rank 4
+ID: chunk_3
+Vector score: -0.2816
+Source: compliance.txt
+Section: Risk
+Page: 1
+Text: Capital protection is not guaranteed and investment value may fluctuate.
+
+Rank 5
+ID: chunk_4
+Vector score: -0.6208
+Source: tax_rules.txt
+Section: Tax Treatment
+Page: 4
+Text: Tax treatment depends on applicable regulations and the customer's circumstances.
+
+Rank 6
+ID: chunk_5
+Vector score: -1.0247
+Source: weather.txt
+Section: Weather
+Page: 1
+Text: The mountain weather forecast predicts heavy snowfall tomorrow.
+
+================================================================================
+RE-RANKING CANDIDATES
+================================================================================
+
+================================================================================
+AFTER RE-RANKING
+================================================================================
+
+Rank 1
+ID: test_chunk_001
+Original vector score: 0.8229
+Re-rank score: 0.9115
+Source: product_brochure.txt
+Section: Fees
+Page: 2
+Text: The Secure Growth Plan has an annual management fee of 1.2 percent.
+
+Rank 2
+ID: chunk_1
+Original vector score: 0.8229
+Re-rank score: 0.9115
+Source: product_brochure.txt
+Section: Fees
+Page: 2
+Text: The Secure Growth Plan has an annual management fee of 1.2 percent.
+
+Rank 3
+ID: chunk_2
+Original vector score: 0.1280
+Re-rank score: 0.5640
+Source: product_brochure.txt
+Section: Withdrawal Conditions
+Page: 3
+Text: The Secure Growth Plan has a three-year lock-in period and early withdrawal is subject to applicable terms.
+
+Rank 4
+ID: chunk_3
+Original vector score: -0.2816
+Re-rank score: 0.3592
+Source: compliance.txt
+Section: Risk
+Page: 1
+Text: Capital protection is not guaranteed and investment value may fluctuate.
+
+Rank 5
+ID: chunk_4
+Original vector score: -0.6208
+Re-rank score: 0.1896
+Source: tax_rules.txt
+Section: Tax Treatment
+Page: 4
+Text: Tax treatment depends on applicable regulations and the customer's circumstances.
+
+Rank 6
+ID: chunk_5
+Original vector score: -1.0247
+Re-rank score: -0.0123
+Source: weather.txt
+Section: Weather
+Page: 1
+Text: The mountain weather forecast predicts heavy snowfall tomorrow.
+
+================================================================================
+FINAL SELECTED CHUNKS (TOP 3)
+================================================================================
+
+Final Rank 1
+ID: test_chunk_001
+Re-rank score: 0.9115
+Source: product_brochure.txt
+Section: Fees
+Page: 2
+Text: The Secure Growth Plan has an annual management fee of 1.2 percent.
+
+Final Rank 2
+ID: chunk_1
+Re-rank score: 0.9115
+Source: product_brochure.txt
+Section: Fees
+Page: 2
+Text: The Secure Growth Plan has an annual management fee of 1.2 percent.
+
+Final Rank 3
+ID: chunk_2
+Re-rank score: 0.5640
+Source: product_brochure.txt
+Section: Withdrawal Conditions
+Page: 3
+Text: The Secure Growth Plan has a three-year lock-in period and early withdrawal is subject to applicable terms.
+
+================================================================================
+RE-RANKING COMPLETED
+================================================================================
