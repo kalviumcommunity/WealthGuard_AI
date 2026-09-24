@@ -1,0 +1,38 @@
+================================================================================
+GENERATED ANSWER
+================================================================================
+
+
+Based on the provided context, the annual management fee for the Secure Growth Plan is **1.2 percent** (as stated in the product brochure under the "Fees" section on page 
+
+================================================================================
+RETRIEVED SOURCES
+================================================================================
+
+Source 1
+----------------------------------------
+Score: 0.8229
+Document: product_brochure.txt
+Section: Fees
+Page: 2
+Text: The Secure Growth Plan has an annual management fee of 1.2 percent.
+
+Source 2
+----------------------------------------
+Score: 0.8229
+Document: product_brochure.txt
+Section: Fees
+Page: 2
+Text: The Secure Growth Plan has an annual management fee of 1.2 percent.
+
+Source 3
+----------------------------------------
+Score: 0.1280
+Document: product_brochure.txt
+Section: Withdrawal Conditions
+Page: 3
+Text: The Secure Growth Plan has a three-year lock-in period and early withdrawal is subject to applicable terms.
+
+================================================================================
+RAG PIPELINE COMPLETED
+================================================================================
