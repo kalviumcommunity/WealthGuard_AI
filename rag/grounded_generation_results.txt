@@ -1,0 +1,79 @@
+================================================================================
+1. GROUNDED ANSWER WITH RETRIEVAL
+================================================================================
+
+Question:
+What is the annual management fee for the Secure Growth Plan?
+
+SUPPORTING RETRIEVED CHUNKS
+======================================================================
+
+Source 1
+----------------------------------------------------------------------
+Similarity score: 0.8229
+Document: product_brochure.txt
+Section: Fees
+Page: 2
+Text: The Secure Growth Plan has an annual management fee of 1.2 percent.
+
+Source 2
+----------------------------------------------------------------------
+Similarity score: 0.8229
+Document: product_brochure.txt
+Section: Fees
+Page: 2
+Text: The Secure Growth Plan has an annual management fee of 1.2 percent.
+
+Source 3
+----------------------------------------------------------------------
+Similarity score: 0.1280
+Document: product_brochure.txt
+Section: Withdrawal Conditions
+Page: 3
+Text: The Secure Growth Plan has a three-year lock-in period and early withdrawal is subject to applicable terms.
+
+GENERATED GROUNDED ANSWER
+----------------------------------------------------------------------
+None
+
+================================================================================
+2. MISSING-CONTEXT FALLBACK
+================================================================================
+
+Question:
+What is the expected annual return of the Secure Growth Plan?
+
+FALLBACK ANSWER
+----------------------------------------------------------------------
+I don't have enough verified information in the provided context to answer this reliably.
+
+================================================================================
+3. WITH RETRIEVAL VS WITHOUT RETRIEVAL
+================================================================================
+
+Question:
+What is the annual management fee for the Secure Growth Plan?
+
+WITH RETRIEVAL
+----------------------------------------------------------------------
+None
+
+WITHOUT RETRIEVAL
+----------------------------------------------------------------------
+User Safety: safe
+
+================================================================================
+EVALUATION SUMMARY
+================================================================================
+
+Grounding checks:
+
+1. The grounded answer was generated using retrieved context.
+2. Supporting chunks are printed with source metadata.
+3. Empty context triggers the missing-context fallback.
+4. The same query was evaluated with and without retrieval.
+5. The comparison demonstrates the role of retrieved evidence.
+
+================================================================================
+GROUNDED GENERATION EVALUATION COMPLETED
+================================================================================
