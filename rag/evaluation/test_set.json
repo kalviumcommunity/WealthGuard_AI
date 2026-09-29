@@ -1,0 +1,42 @@
+[
+  {
+    "id": "Q1",
+    "question": "What is the annual management fee for the Secure Growth Plan?",
+    "expected_answer": "The annual management fee is 1.2 percent.",
+    "expected_keywords": ["1.2", "percent"],
+    "expected_sources": ["product_brochure.txt"],
+    "should_answer": true
+  },
+  {
+    "id": "Q2",
+    "question": "What is the lock-in period of the Secure Growth Plan?",
+    "expected_answer": "The Secure Growth Plan has a three-year lock-in period.",
+    "expected_keywords": ["three-year", "lock-in"],
+    "expected_sources": ["product_brochure.txt"],
+    "should_answer": true
+  },
+  {
+    "id": "Q3",
+    "question": "Is capital protection guaranteed in the Secure Growth Plan?",
+    "expected_answer": "Capital protection is not guaranteed.",
+    "expected_keywords": ["capital protection", "not guaranteed"],
+    "expected_sources": ["compliance.txt"],
+    "should_answer": true
+  },
+  {
+    "id": "Q4",
+    "question": "What determines the tax treatment of the Secure Growth Plan?",
+    "expected_answer": "Tax treatment depends on applicable regulations and customer circumstances.",
+    "expected_keywords": ["tax treatment", "regulations", "customer circumstances"],
+    "expected_sources": ["tax_rules.txt"],
+    "should_answer": true
+  },
+  {
+    "id": "Q5",
+    "question": "What is the expected annual return of the Secure Growth Plan?",
+    "expected_answer": "The expected annual return is not available in the provided documents.",
+    "expected_keywords": [],
+    "expected_sources": [],
+    "should_answer": false
+  }
+]

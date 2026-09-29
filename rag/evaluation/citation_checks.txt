@@ -1,0 +1,34 @@
+Q1 - What is the annual management fee for the Secure Growth Plan?
+Expected sources: ['product_brochure.txt']
+Retrieved sources: ['product_brochure.txt']
+Cited sources: ['product_brochure.txt']
+Citation quality: 1.0
+------------------------------------------------------------
+
+Q2 - What is the lock-in period of the Secure Growth Plan?
+Expected sources: ['product_brochure.txt']
+Retrieved sources: ['product_brochure.txt']
+Cited sources: ['product_brochure.txt']
+Citation quality: 1.0
+------------------------------------------------------------
+
+Q3 - Is capital protection guaranteed in the Secure Growth Plan?
+Expected sources: ['compliance.txt']
+Retrieved sources: ['compliance.txt', 'product_brochure.txt']
+Cited sources: ['compliance.txt']
+Citation quality: 1.0
+------------------------------------------------------------
+
+Q4 - What determines the tax treatment of the Secure Growth Plan?
+Expected sources: ['tax_rules.txt']
+Retrieved sources: ['product_brochure.txt']
+Cited sources: []
+Citation quality: 0.0
+------------------------------------------------------------
+
+Q5 - What is the expected annual return of the Secure Growth Plan?
+Expected sources: []
+Retrieved sources: ['product_brochure.txt']
+Cited sources: []
+Citation quality: 1
+------------------------------------------------------------
