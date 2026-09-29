@@ -1,0 +1,222 @@
+{
+  "summary": {
+    "test_cases": 5,
+    "average_correctness": 0.4,
+    "average_grounding": 0.8,
+    "average_citation_quality": 0.8,
+    "average_source_retrieval": 0.6,
+    "evaluation_method": "Keyword-based correctness and grounding checks, plus expected-source citation matching."
+  },
+  "results": [
+    {
+      "id": "Q1",
+      "question": "What is the annual management fee for the Secure Growth Plan?",
+      "expected_answer": "The annual management fee is 1.2 percent.",
+      "actual_answer": "The annual management fee for the Secure Growth Plan is 1.2 percent [Source: product_brochure.txt].",
+      "retrieved_chunks": [
+        {
+          "text": "The Secure Growth Plan has an annual management fee of 1.2 percent.",
+          "source": "product_brochure.txt",
+          "section": "Fees",
+          "page": 2,
+          "distance": 0.17708632349967957
+        },
+        {
+          "text": "The Secure Growth Plan has an annual management fee of 1.2 percent.",
+          "source": "product_brochure.txt",
+          "section": "Fees",
+          "page": 2,
+          "distance": 0.17708642780780792
+        },
+        {
+          "text": "The Secure Growth Plan has a three-year lock-in period and early withdrawal is subject to applicable terms.",
+          "source": "product_brochure.txt",
+          "section": "Withdrawal Conditions",
+          "page": 3,
+          "distance": 0.8720320463180542
+        }
+      ],
+      "correctness": 1.0,
+      "grounding": 1.0,
+      "citation_quality": 1.0,
+      "source_retrieval": 1.0,
+      "cited_sources": [
+        "product_brochure.txt"
+      ],
+      "retrieved_sources": [
+        "product_brochure.txt"
+      ],
+      "expected_sources": [
+        "product_brochure.txt"
+      ],
+      "answered": true
+    },
+    {
+      "id": "Q2",
+      "question": "What is the lock-in period of the Secure Growth Plan?",
+      "expected_answer": "The Secure Growth Plan has a three-year lock-in period.",
+      "actual_answer": "The Secure Growth Plan has a three\u2011year lock\u2011in period. [Source: product_brochure.txt]",
+      "retrieved_chunks": [
+        {
+          "text": "The Secure Growth Plan has a three-year lock-in period and early withdrawal is subject to applicable terms.",
+          "source": "product_brochure.txt",
+          "section": "Withdrawal Conditions",
+          "page": 3,
+          "distance": 0.37538743019104004
+        },
+        {
+          "text": "The Secure Growth Plan has an annual management fee of 1.2 percent.",
+          "source": "product_brochure.txt",
+          "section": "Fees",
+          "page": 2,
+          "distance": 0.7306311726570129
+        },
+        {
+          "text": "The Secure Growth Plan has an annual management fee of 1.2 percent.",
+          "source": "product_brochure.txt",
+          "section": "Fees",
+          "page": 2,
+          "distance": 0.7306313514709473
+        }
+      ],
+      "correctness": 0.0,
+      "grounding": 1.0,
+      "citation_quality": 1.0,
+      "source_retrieval": 1.0,
+      "cited_sources": [
+        "product_brochure.txt"
+      ],
+      "retrieved_sources": [
+        "product_brochure.txt"
+      ],
+      "expected_sources": [
+        "product_brochure.txt"
+      ],
+      "answered": true
+    },
+    {
+      "id": "Q3",
+      "question": "Is capital protection guaranteed in the Secure Growth Plan?",
+      "expected_answer": "Capital protection is not guaranteed.",
+      "actual_answer": "No. According to the compliance documentation, \u201cCapital protection is not guaranteed and investment value may fluctuate.\u201d [Source: compliance.txt]",
+      "retrieved_chunks": [
+        {
+          "text": "Capital protection is not guaranteed and investment value may fluctuate.",
+          "source": "compliance.txt",
+          "section": "Risk",
+          "page": 1,
+          "distance": 0.7113889455795288
+        },
+        {
+          "text": "The Secure Growth Plan has an annual management fee of 1.2 percent.",
+          "source": "product_brochure.txt",
+          "section": "Fees",
+          "page": 2,
+          "distance": 0.7864134311676025
+        },
+        {
+          "text": "The Secure Growth Plan has an annual management fee of 1.2 percent.",
+          "source": "product_brochure.txt",
+          "section": "Fees",
+          "page": 2,
+          "distance": 0.7864134907722473
+        }
+      ],
+      "correctness": 1.0,
+      "grounding": 1.0,
+      "citation_quality": 1.0,
+      "source_retrieval": 1.0,
+      "cited_sources": [
+        "compliance.txt"
+      ],
+      "retrieved_sources": [
+        "compliance.txt",
+        "product_brochure.txt"
+      ],
+      "expected_sources": [
+        "compliance.txt"
+      ],
+      "answered": true
+    },
+    {
+      "id": "Q4",
+      "question": "What determines the tax treatment of the Secure Growth Plan?",
+      "expected_answer": "Tax treatment depends on applicable regulations and customer circumstances.",
+      "actual_answer": "I don't have enough verified information to answer this reliably.",
+      "retrieved_chunks": [
+        {
+          "text": "The Secure Growth Plan has an annual management fee of 1.2 percent.",
+          "source": "product_brochure.txt",
+          "section": "Fees",
+          "page": 2,
+          "distance": 0.8320735096931458
+        },
+        {
+          "text": "The Secure Growth Plan has an annual management fee of 1.2 percent.",
+          "source": "product_brochure.txt",
+          "section": "Fees",
+          "page": 2,
+          "distance": 0.8320736885070801
+        },
+        {
+          "text": "The Secure Growth Plan has a three-year lock-in period and early withdrawal is subject to applicable terms.",
+          "source": "product_brochure.txt",
+          "section": "Withdrawal Conditions",
+          "page": 3,
+          "distance": 0.9602696895599365
+        }
+      ],
+      "correctness": 0.0,
+      "grounding": 0.0,
+      "citation_quality": 0.0,
+      "source_retrieval": 0.0,
+      "cited_sources": [],
+      "retrieved_sources": [
+        "product_brochure.txt"
+      ],
+      "expected_sources": [
+        "tax_rules.txt"
+      ],
+      "answered": true
+    },
+    {
+      "id": "Q5",
+      "question": "What is the expected annual return of the Secure Growth Plan?",
+      "expected_answer": "The expected annual return is not available in the provided documents.",
+      "actual_answer": "I don't have enough verified information to answer this reliably.",
+      "retrieved_chunks": [
+        {
+          "text": "The Secure Growth Plan has an annual management fee of 1.2 percent.",
+          "source": "product_brochure.txt",
+          "section": "Fees",
+          "page": 2,
+          "distance": 0.611032247543335
+        },
+        {
+          "text": "The Secure Growth Plan has an annual management fee of 1.2 percent.",
+          "source": "product_brochure.txt",
+          "section": "Fees",
+          "page": 2,
+          "distance": 0.6110323071479797
+        },
+        {
+          "text": "The Secure Growth Plan has a three-year lock-in period and early withdrawal is subject to applicable terms.",
+          "source": "product_brochure.txt",
+          "section": "Withdrawal Conditions",
+          "page": 3,
+          "distance": 0.8113402724266052
+        }
+      ],
+      "correctness": 0,
+      "grounding": 1,
+      "citation_quality": 1,
+      "source_retrieval": 0,
+      "cited_sources": [],
+      "retrieved_sources": [
+        "product_brochure.txt"
+      ],
+      "expected_sources": [],
+      "answered": true
+    }
+  ]
+}
