@@ -33,6 +33,4 @@ def clean_text(text):
     text = re.sub(r"\n{3,}", "\n\n", text)
 
     # Remove leading/trailing whitespace
-    text = text.strip()
-
-    return text
+    return text.strip()
