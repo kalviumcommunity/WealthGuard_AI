@@ -16,12 +16,12 @@ documents = [
         "content": "The video explanation should demonstrate the implementation, explain the important concepts, and show the sample dialogue."
     },
     {
-       "id": "doc4",
-        "content": "For conversational RAG, follow-up questions should be rewritten into standalone queries before retrieval."
+        "id": "doc3",
+        "content": "The GitHub repository must be public and the pull request must remain open at submission time."
     },
     {
-          "id": "doc3",
-                "content": "The GitHub repository must be public and the pull request must remain open at submission time."
+        "id": "doc4",
+        "content": "For conversational RAG, follow-up questions should be rewritten into standalone queries before retrieval."
     },
     {
         "id": "doc5",
