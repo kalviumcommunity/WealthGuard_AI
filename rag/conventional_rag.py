@@ -24,12 +24,12 @@ documents = [
         "content": "For conversational RAG, follow-up questions should be rewritten into standalone queries before retrieval."
     },
     {
-        "id": "doc6",
-        "content": "RAG answers should be grounded in retrieved source chunks instead of relying only on conversation memory."
-    },
-    {
         "id": "doc5",
         "content": "Long conversations should use a short rolling history and summarize older turns to avoid token-limit problems."
+    },
+    {
+        "id": "doc6",
+        "content": "RAG answers should be grounded in retrieved source chunks instead of relying only on conversation memory."
     }
 ]
 
