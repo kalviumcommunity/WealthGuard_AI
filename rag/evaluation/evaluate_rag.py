@@ -19,7 +19,7 @@ MODEL_NAME = "all-MiniLM-L6-v2"
 COLLECTION_NAME = "wealthguard_chunks"
 VECTOR_DB_PATH = str(BASE_DIR / "vector_db/chroma_data")
 
-TOP_K = 3
+TOP_K = 34567
 
 REFUSAL_MESSAGE = (
     "I don't have enough verified information "

@@ -1,13 +1,13 @@
 ```python
+from fastapi import FastAPI
+from pydantic import BaseModel
+
 import hashlib
 import json
 import logging
 import time
 import uuid
 from datetime import datetime
-
-from fastapi import FastAPI
-from pydantic import BaseModel
 
 
 app = FastAPI()
