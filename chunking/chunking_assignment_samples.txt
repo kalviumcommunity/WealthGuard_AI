@@ -1,0 +1,87 @@
+DOCUMENT CHUNKING ASSIGNMENT - SAMPLE CHUNKS
+======================================================================
+
+Total corpus size: 366 characters
+Documents: ['product.html', 'compliance.txt', 'policy.md']
+
+STATISTICS:
+----------------------------------------------------------------------
+Fixed-size (200 chars, 30 overlap):
+  Chunk count: 3
+  Average size: 140.7 characters
+
+Paragraph-based:
+  Chunk count: 4
+  Average size: 89.5 characters
+
+Sentence-based:
+  Chunk count: 4
+  Average size: 90.0 characters
+
+
+FIXED-SIZE CHUNKS:
+----------------------------------------------------------------------
+
+Chunk 1 (200 chars):
+<!doctype html><html><head><title>Product terms</title></head><body><h1>Lock-in period</h1><p>The lock-in period is three years.</p></body></html>
+
+Compliance note: Capital protection is not guarantee
+
+Chunk 2 (196 chars):
+al protection is not guaranteed. Customers should review the applicable terms before investing.
+
+
+# Secure Growth Plan
+
+The annual management fee is 1.2 percent. The minimum investment is 50,000.
+
+
+Chunk 3 (26 chars):
+mum investment is 50,000.
+
+
+
+PARAGRAPH CHUNKS:
+----------------------------------------------------------------------
+
+Chunk 1 (146 chars):
+<!doctype html><html><head><title>Product terms</title></head><body><h1>Lock-in period</h1><p>The lock-in period is three years.</p></body></html>
+
+Chunk 2 (117 chars):
+Compliance note: Capital protection is not guaranteed. Customers should review the applicable terms before investing.
+
+Chunk 3 (20 chars):
+# Secure Growth Plan
+
+Chunk 4 (75 chars):
+The annual management fee is 1.2 percent. The minimum investment is 50,000.
+
+
+SENTENCE CHUNKS:
+----------------------------------------------------------------------
+
+Chunk 1 (202 chars):
+<!doctype html><html><head><title>Product terms</title></head><body><h1>Lock-in period</h1><p>The lock-in period is three years.</p></body></html>
+
+Compliance note: Capital protection is not guaranteed.
+
+Chunk 2 (62 chars):
+Customers should review the applicable terms before investing.
+
+Chunk 3 (63 chars):
+# Secure Growth Plan
+
+The annual management fee is 1.2 percent.
+
+Chunk 4 (33 chars):
+The minimum investment is 50,000.
+
+
+JUSTIFICATION:
+----------------------------------------------------------------------
+Paragraph-based chunking is chosen because:
+1. WealthGuard documents have clear paragraph structure
+2. Each paragraph represents a complete idea
+3. Preserves meaning without cutting concepts in half
+4. Suitable size for retrieval within context window
+5. Aligns with document organization and retrieval needs
