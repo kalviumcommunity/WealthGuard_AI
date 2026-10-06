@@ -1,29 +1,28 @@
+# Python environment
 .venv/
+__pycache__/
+*.pyc
+
+# Node modules
 node_modules/
+
+# Environment secrets (NEVER commit these)
 .env
+.env.local
+.env.*.local
+
+# Data directory (keep sample corpus)
 data/
 !data/
 data/*
 !data/sample_corpus/
 !data/sample_corpus/**
+
+# Outputs
 outputs/
-__pycache__/
-*.pyc
-.env
+
 # Runtime document uploads
 uploads/
 
 # Local ChromaDB storage
 vector_db/chroma_data/
-
-# Python environment
-.venv/
-
-# Environment secrets
-.env
-
-# Runtime uploads
-uploads/
-
-# Local ChromaDB database
-vector_db/chroma_data
